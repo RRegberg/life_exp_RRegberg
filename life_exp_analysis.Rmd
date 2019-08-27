@@ -29,7 +29,8 @@ data("gapminder_unfiltered")
 gapminder_unfiltered %>%
   group_by(year, country) %>%
   summarize(maxLifeExp=max(lifeExp)) %>%
-  slice(which.max(maxLifeExp)) 
+  slice(which.max(maxLifeExp)) -> MaxLifeExp
+MaxLifeExp
 ```
 
 
