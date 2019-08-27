@@ -2,7 +2,7 @@
 title: "Examine Life Expectancy"
 author: "Rachel Regberg"
 date: "`r Sys.Date()`"
-output: word_document
+output: html_document
 urlcolor: "blue"
 ---
 
@@ -18,7 +18,7 @@ Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 ## Life Expectancy Analysis
 
 1. Load the `gapminder_full` data fram into R. 
-```{r}
+```{r warning=FALSE}
 suppressPackageStartupMessages(library(tidyverse))
 library(gapminder)
 data("gapminder_unfiltered")
