@@ -33,4 +33,14 @@ gapminder_unfiltered %>%
 MaxLifeExp
 ```
 
+Alternate solution:
+```{r}
+gapminder_unfiltered %>%
+  group_by(year) %>%
+  filter(lifeExp==max(lifeExp)) %>%
+  select(country, lifeExp, year) %>%
+  arrange(year) ->
+  LifeExpectancy
+LifeExpectancy
+```
 
