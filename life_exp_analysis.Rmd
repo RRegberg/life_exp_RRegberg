@@ -17,6 +17,8 @@ Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
 ## Life Expectancy Analysis
 
+We will first clean the data.
+
 1. Load the `gapminder_full` data fram into R. 
 ```{r warning=FALSE}
 suppressPackageStartupMessages(library(tidyverse))
@@ -44,3 +46,4 @@ gapminder_unfiltered %>%
 LifeExpectancy
 ```
 
+We will now recreate the plot from Oeppen and Vaupel (2002).
