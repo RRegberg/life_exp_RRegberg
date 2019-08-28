@@ -35,7 +35,7 @@ gapminder_unfiltered %>%
 MaxLifeExp
 ```
 
-Alternate solution:
+Alternate/Correct solution:
 ```{r}
 gapminder_unfiltered %>%
   group_by(year) %>%
