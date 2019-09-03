@@ -50,6 +50,16 @@ We will now recreate the plot from Oeppen and Vaupel (2002).
 
 My answer:
 ```{r}
+
+LifeExpectancy %>%
+  ggplot(aes(x=year,
+             y=lifeExp)) +
+  geom_point(aes(color=country)) +
+  geom_smooth(method="lm",se=F) +
+  geom_point(shape=1)
+```
+
+```{r}
 gapminder_unfiltered %>%
   group_by(year, country) %>%
   summarize(maxLifeExp=max(lifeExp)) %>%
@@ -58,6 +68,7 @@ gapminder_unfiltered %>%
   geom_point(mapping=aes(fill=country), size=3, pch=21) +
   geom_smooth(se=FALSE, method=lm, color="blue") +
   scale_color_discrete(name="Country") +
+  ```
   xlab("Year") +
   ylab("Maximum Life Expectancy") +
   theme_bw()
