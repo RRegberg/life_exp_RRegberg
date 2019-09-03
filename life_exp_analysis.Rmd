@@ -49,5 +49,10 @@ LifeExpectancy
 We will now recreate the plot from Oeppen and Vaupel (2002).
 
 ```{r}
-
+LifeExpectancy %>%
+  ggplot(aes(x=year,
+             y=lifeExp)) +
+  geom_point(aes(color=country)) +
+  geom_smooth(method="lm",se=F) +
+  geom_point(shape=1)
 ```
